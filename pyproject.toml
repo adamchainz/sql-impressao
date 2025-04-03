@@ -32,6 +32,11 @@ urls.Changelog = "https://github.com/adamchainz/sql-fingerprint-python/blob/main
 urls.Funding = "https://adamj.eu/books/"
 urls.Repository = "https://github.com/adamchainz/sql-fingerprint-python"
 
+[dependency-groups]
+test = [
+  "pytest",
+]
+
 [tool.maturin]
 include = [
   "rust-toolchain.toml",
