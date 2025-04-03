@@ -65,7 +65,7 @@ wheels = [
 ]
 
 [[package]]
-name = "sql-fingerprint"
+name = "sql-impressao"
 version = "0.1.0"
 source = { editable = "." }
 

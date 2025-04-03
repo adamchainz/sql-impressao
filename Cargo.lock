@@ -194,7 +194,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "sql-fingerprint-python"
+name = "sql-impressao"
 version = "0.1.0"
 dependencies = [
  "pyo3",
