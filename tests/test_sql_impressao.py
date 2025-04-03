@@ -4,13 +4,13 @@ from sql_impressao import fingerprint_many, fingerprint_one
 def test_fingerprint_one():
     sql = "SELECT a, b FROM c WHERE d = e ORDER BY f"
     result = fingerprint_one(sql)
-    assert result == "SELECT ... FROM c WHERE d = e ORDER BY ..."
+    assert result == "SELECT ... FROM c WHERE ... ORDER BY ..."
 
 
 def test_fingerprint_one_dialect():
     sql = "SELECT a, b FROM c WHERE d = e ORDER BY f"
     result = fingerprint_one(sql, dialect="postgresql")
-    assert result == "SELECT ... FROM c WHERE d = e ORDER BY ..."
+    assert result == "SELECT ... FROM c WHERE ... ORDER BY ..."
 
 
 def test_fingerprint_many():

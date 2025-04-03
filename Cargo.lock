@@ -186,9 +186,9 @@ checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
 
 [[package]]
 name = "sql-fingerprint"
-version = "1.0.0"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c33e8f2ee67429c6e0dca644d3bfb08e000db1734ec7709bfb1d1b1b233e791d"
+checksum = "14cf2c43a1910fdd2b6fa118aa2aa9aaf8a0814abd574f5cda941160d1e94d47"
 dependencies = [
  "sqlparser",
 ]
