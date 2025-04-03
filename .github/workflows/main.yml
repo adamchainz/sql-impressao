@@ -104,14 +104,14 @@ jobs:
       uses: PyO3/maturin-action@v1
       with:
         command: sdist
-        args: --out dist
+        args: --out dist --find-interpreter
 
     - name: Build wheels
       uses: PyO3/maturin-action@v1
       with:
         target: ${{ matrix.target }}
         manylinux: ${{ matrix.manylinux || 'auto' }}
-        args: --release --locked --out dist
+        args: --release --locked --out dist --find-interpreter
 
     - run: ${{ (matrix.os == 'windows' && 'dir') || 'ls -lh' }} dist/
 
