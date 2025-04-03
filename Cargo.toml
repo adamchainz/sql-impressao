@@ -1,0 +1,12 @@
+[package]
+name = "sql-fingerprint-python"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "sql_fingerprint"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.24.0"
+sql-fingerprint = "1.0.0"

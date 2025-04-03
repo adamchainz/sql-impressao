@@ -1,0 +1,45 @@
+[build-system]
+build-backend = "maturin"
+requires = [ "maturin>=1.8,<2" ]
+
+[project]
+name = "sql-fingerprint"
+version = "0.1.0"
+description = "A SQL fingerprinter."
+readme = "README.rst"
+keywords = [
+  "SQL",
+]
+authors = [
+  { name = "Adam Johnson", email = "me@adamj.eu" },
+]
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Django",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+urls.Changelog = "https://github.com/adamchainz/sql-fingerprint-python/blob/main/CHANGELOG.rst"
+urls.Funding = "https://adamj.eu/books/"
+urls.Repository = "https://github.com/adamchainz/sql-fingerprint-python"
+
+[tool.maturin]
+include = [
+  "rust-toolchain.toml",
+]
+features = [ "pyo3/extension-module" ]
+
+[tool.pyproject-fmt]
+max_supported_python = "3.13"
+
+[tool.rstcheck]
+report_level = "ERROR"
