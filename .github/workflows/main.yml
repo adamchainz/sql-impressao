@@ -104,7 +104,7 @@ jobs:
       uses: PyO3/maturin-action@v1
       with:
         command: sdist
-        args: --out dist --find-interpreter
+        args: --out dist
 
     - name: Build wheels
       uses: PyO3/maturin-action@v1
