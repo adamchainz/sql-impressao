@@ -13,6 +13,8 @@ sql-impressao
    :alt: pre-commit
 
 Python bindings for `sql-fingerprint <https://github.com/adamchainz/sql-fingerprint>`__, a SQL fingerprinter.
+(*Impressão digital* is Portuguese for “fingerprint”.)
+
 A quick example:
 
 .. code-block:: python-console
