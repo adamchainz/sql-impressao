@@ -1,12 +1,12 @@
-========================
-sql-fingerprint (Python)
-========================
+=============
+sql-impressao
+=============
 
-.. image:: https://img.shields.io/github/actions/workflow/status/adamchainz/sql-fingerprint-python/main.yml.svg?branch=main&style=for-the-badge
-   :target: https://github.com/adamchainz/sql-fingerprint-python/actions?workflow=CI
+.. image:: https://img.shields.io/github/actions/workflow/status/adamchainz/sql-impressao/main.yml.svg?branch=main&style=for-the-badge
+   :target: https://github.com/adamchainz/sql-impressao/actions?workflow=CI
 
-.. image:: https://img.shields.io/pypi/v/sql-fingerprint-python.svg?style=for-the-badge
-   :target: https://pypi.org/project/sql-fingerprint-python/
+.. image:: https://img.shields.io/pypi/v/sql-impressao.svg?style=for-the-badge
+   :target: https://pypi.org/project/sql-impressao/
 
 .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=for-the-badge
    :target: https://github.com/pre-commit/pre-commit
@@ -17,7 +17,7 @@ A quick example:
 
 .. code-block:: python-console
 
-    >>> from sql_fingerprint import fingerprint_one
+    >>> from sql_impressao import fingerprint_one
     >>> fingerprint_one('SELECT a, b FROM cheeses WHERE origin = "France" ORDER BY age DESC')
     'SELECT ... FROM cheeses WHERE ... ORDER BY ...'
 
@@ -34,7 +34,7 @@ With **pip**:
 
 .. code-block:: sh
 
-    python -m pip install sql-fingerprint
+    python -m pip install sql-impressao
 
 Python 3.9 to 3.13 supported.
 
@@ -63,7 +63,7 @@ Example:
 
 .. code-block:: python
 
-    from sql_fingerprint import fingerprint_one
+    from sql_impressao import fingerprint_one
 
     sql = 'SELECT a, b FROM cheeses WHERE origin = "France" ORDER BY age DESC'
     fingerprint = fingerprint_one(sql)
@@ -84,7 +84,7 @@ Example:
 
 .. code-block:: python
 
-    from sql_fingerprint import fingerprint_many
+    from sql_impressao import fingerprint_many
 
     sqls = ["SELECT a, b FROM c", "SELECT b, c FROM d"]
     fingerprints = fingerprint_many(sqls)

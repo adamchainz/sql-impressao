@@ -1,4 +1,4 @@
-from sql_fingerprint import fingerprint_many, fingerprint_one
+from sql_impressao import fingerprint_many, fingerprint_one
 
 
 def test_fingerprint_one():

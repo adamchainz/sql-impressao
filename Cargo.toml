@@ -1,10 +1,10 @@
 [package]
-name = "sql-fingerprint-python"
+name = "sql-impressao"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name = "sql_fingerprint"
+name = "sql_impressao"
 crate-type = ["cdylib"]
 
 [dependencies]

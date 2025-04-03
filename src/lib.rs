@@ -1,4 +1,4 @@
-use ::sql_fingerprint as upstream_fingerprint;
+use ::sql_fingerprint;
 use pyo3::prelude::*;
 use sqlparser::dialect::dialect_from_str;
 
@@ -6,7 +6,7 @@ use sqlparser::dialect::dialect_from_str;
 #[pyo3(signature = (sql, *, dialect = None))]
 fn fingerprint_one(sql: String, dialect: Option<String>) -> PyResult<String> {
     let parsed_dialect = parse_dialect(dialect)?;
-    Ok(upstream_fingerprint::fingerprint_one(
+    Ok(sql_fingerprint::fingerprint_one(
         sql.as_str(),
         parsed_dialect.as_deref(),
     ))
@@ -17,7 +17,7 @@ fn fingerprint_one(sql: String, dialect: Option<String>) -> PyResult<String> {
 fn fingerprint_many(sql: Vec<String>, dialect: Option<String>) -> PyResult<Vec<String>> {
     let parsed_dialect = parse_dialect(dialect)?;
     let sql_slices: Vec<&str> = sql.iter().map(|s| s.as_str()).collect();
-    Ok(upstream_fingerprint::fingerprint_many(
+    Ok(sql_fingerprint::fingerprint_many(
         sql_slices,
         parsed_dialect.as_deref(),
     ))
@@ -38,7 +38,7 @@ fn parse_dialect(
 }
 
 #[pymodule]
-fn sql_fingerprint(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn sql_impressao(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(fingerprint_one, m)?)?;
     m.add_function(wrap_pyfunction!(fingerprint_many, m)?)?;
     Ok(())
