@@ -41,10 +41,23 @@ Python 3.9 to 3.13 supported.
 Usage
 =====
 
-``fingerprint_one(sql: str) -> str``
-------------------------------------
+``fingerprint_one(sql: str, *, dialect: str | None = None) -> str``
+-------------------------------------------------------------------
 
-Generate the fingerprint for a single SQL statement.
+Generate the fingerprint for a single SQL string.
+
+``sql`` is the SQL string to fingerprint.
+It may contain multiple statements separated by semicolons.
+
+``dialect`` is an optional string that specifies the SQL dialect to use.
+Supported names include:
+
+* ``generic`` - the default, a generic SQL dialect.
+* ``mysql`` - MySQL dialect.
+* ``postgresql`` or ``postgres`` - PostgreSQL dialect.
+* ``sqlite`` - SQLite dialect.
+
+See the `source of the underlying function <https://github.com/apache/datafusion-sqlparser-rs/blob/776b10afe608a88811b807ab795831d55f186ee3/src/dialect/mod.rs#L1038-L1059>`__ for a full list.
 
 Example:
 
@@ -56,11 +69,16 @@ Example:
     fingerprint = fingerprint_one(sql)
     assert fingerprint == "SELECT ... FROM cheeses WHERE ... ORDER BY ..."
 
-``fingerprint_many(sql: list[str]) -> list[str]``
--------------------------------------------------
+``fingerprint_many(sql: list[str], *, dialect: str | None = None) -> list[str]``
+--------------------------------------------------------------------------------
 
-Generate the fingerprints for a list of SQL statements.
+Generate the fingerprints for a list of SQL strings.
 Doing so for a batch of strings allows sharing some state, such as savepoint ID aliases.
+
+``sql`` is a list of SQL strings to fingerprint.
+Each string may contain multiple statements separated by semicolons.
+
+``dialect`` is an optional string that specifies the SQL dialect to use, as above.
 
 Example:
 
