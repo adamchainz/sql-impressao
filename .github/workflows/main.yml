@@ -87,8 +87,6 @@ jobs:
           - os: windows
             target: i686
             python-architecture: x86
-          - os: windows
-            target: aarch64
 
     runs-on: ${{ (matrix.os == 'linux' && 'ubuntu-24.04') || (matrix.os == 'macos' && 'macos-14') || (matrix.os == 'windows' && 'windows-2022') || 'unknown' }}
     steps:
@@ -111,7 +109,7 @@ jobs:
       with:
         target: ${{ matrix.target }}
         manylinux: ${{ matrix.manylinux || 'auto' }}
-        args: --release --locked --out dist
+        args: --release --locked --out dist --find-interpreter
 
     - run: ${{ (matrix.os == 'windows' && 'dir') || 'ls -lh' }} dist/
 
