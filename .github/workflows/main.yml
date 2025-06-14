@@ -50,10 +50,10 @@ jobs:
 
   build:
     name: Build os=${{ matrix.os }} target=${{ matrix.target }} ml=${{ matrix.manylinux || 'auto' }}
-    if: >
-      startsWith(github.ref, 'refs/tags/') ||
-      github.ref == 'refs/heads/main' ||
-      contains(github.event.pull_request.labels.*.name, 'Build')
+    if:
+      startsWith(github.ref, 'refs/tags/')
+      || github.ref == 'refs/heads/main'
+      || contains(github.event.pull_request.labels.*.name, 'Build')
     strategy:
       fail-fast: false
       matrix:
@@ -88,7 +88,13 @@ jobs:
             target: i686
             python-architecture: x86
 
-    runs-on: ${{ (matrix.os == 'linux' && 'ubuntu-24.04') || (matrix.os == 'macos' && 'macos-14') || (matrix.os == 'windows' && 'windows-2022') || 'unknown' }}
+    runs-on:
+      ${{
+        (matrix.os == 'linux' && 'ubuntu-24.04')
+        || (matrix.os == 'macos' && 'macos-14')
+        || (matrix.os == 'windows' && 'windows-2022')
+        || 'unknown'
+      }}
     steps:
     - uses: actions/checkout@v4
 
