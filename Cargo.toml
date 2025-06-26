@@ -8,6 +8,6 @@ name = "sql_impressao"
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = "0.24.0"
-sql-fingerprint = "1.0.0"
-sqlparser = "0.55.0"
+pyo3 = { version = ">= 0.24.0" }
+sql-fingerprint = { version = ">= 1.0.0" }
+sqlparser = { version = ">= 0.55.0" }
