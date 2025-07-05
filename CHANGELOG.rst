@@ -2,6 +2,9 @@
 Changelog
 =========
 
+1.7.0 (2025-07-05)
+------------------
+
 * Update to sql-fingerprint 1.8.0 (`changelog <https://github.com/adamchainz/sql-fingerprint/blob/main/CHANGELOG.rst>`__).
 
 1.6.0 (2025-06-26)
