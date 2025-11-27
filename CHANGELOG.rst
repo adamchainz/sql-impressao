@@ -2,6 +2,9 @@
 Changelog
 =========
 
+1.10.0 (2025-11-27)
+-------------------
+
 * Drop Python 3.9 support.
 
 * Provide Python 3.14 wheels for all platforms.
