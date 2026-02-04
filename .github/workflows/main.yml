@@ -79,8 +79,6 @@ jobs:
           # windows
           - os: windows
             target: x86_64
-          - os: windows
-            target: aarch64
 
     runs-on:
       ${{
