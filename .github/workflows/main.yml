@@ -60,8 +60,6 @@ jobs:
           - os: linux
             target: aarch64
           - os: linux
-            target: i686
-          - os: linux
             target: armv7
 
           # musllinux
@@ -82,8 +80,7 @@ jobs:
           - os: windows
             target: x86_64
           - os: windows
-            target: i686
-            python-architecture: x86
+            target: aarch64
 
     runs-on:
       ${{
