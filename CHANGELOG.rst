@@ -2,6 +2,10 @@
 Changelog
 =========
 
+* Ship Windows ARM wheels.
+
+  `PR #50 <https://github.com/adamchainz/sql-impressao/pull/50>`__.
+
 * Stop shipping wheels for 32-bit Linux and Windows.
 
   `PR #48 <https://github.com/adamchainz/sql-impressao/pull/48>`__.
