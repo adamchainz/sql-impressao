@@ -2,6 +2,9 @@
 Changelog
 =========
 
+1.11.0 (2026-02-10)
+-------------------
+
 * Update to sql-fingerprint 1.10.0 (`changelog <https://github.com/adamchainz/sql-fingerprint/blob/main/CHANGELOG.rst>`__).
 
 * Ship Windows ARM wheels.
