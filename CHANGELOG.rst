@@ -2,6 +2,9 @@
 Changelog
 =========
 
+1.12.0 (2026-05-14)
+-------------------
+
 * Build with frame pointers enabled, preparation for `PEP 831 <https://peps.python.org/pep-0831/>`__.
 
   `PR #61 <https://github.com/adamchainz/sql-impressao/issues/61>`__.
