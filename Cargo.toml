@@ -9,5 +9,5 @@ crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = { version = ">= 0.24.0" }
-sql-fingerprint = { version = ">= 1.10.0" }
+sql-fingerprint = { version = ">= 1.11.1" }
 sqlparser = { version = ">= 0.61.0" }

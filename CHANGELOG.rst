@@ -6,6 +6,8 @@ Changelog
 
   `PR #61 <https://github.com/adamchainz/sql-impressao/issues/61>`__.
 
+* Update to sql-fingerprint 1.11.1 (`changelog <https://github.com/adamchainz/sql-fingerprint/blob/main/CHANGELOG.rst>`__).
+
 1.11.0 (2026-02-10)
 -------------------
 
