@@ -11,3 +11,6 @@ crate-type = ["cdylib"]
 pyo3 = { version = ">= 0.24.0" }
 sql-fingerprint = { version = ">= 1.11.1" }
 sqlparser = { version = ">= 0.61.0" }
+
+[profile.release]
+lto = true
