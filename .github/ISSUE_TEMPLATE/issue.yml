@@ -2,6 +2,14 @@ name: Issue
 description: File an issue
 body:
 - type: input
+  id: python_version
+  attributes:
+    label: Python Version
+    description: Which version of Python were you using?
+    placeholder: 3.14.0
+  validations:
+    required: false
+- type: input
   id: package_version
   attributes:
     label: Package Version
