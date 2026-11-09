@@ -13,6 +13,11 @@ Unreleased
 
   `PR #78 <https://github.com/adamchainz/sql-impressao/pull/78>`__.
 
+* Include type hints in built wheels, fixing mypy’s “missing library stubs or py.typed marker” error.
+
+  `PR #82 <https://github.com/adamchainz/sql-impressao/pull/82>`__.
+  Thanks to 93578237 for the report in `Issue #59 <https://github.com/adamchainz/sql-impressao/issues/59>`__.
+
 1.12.0 (2026-05-14)
 -------------------
 
