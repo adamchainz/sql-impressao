@@ -5,9 +5,13 @@ Changelog
 Unreleased
 ----------
 
+* Support Python 3.15.
+
+  `PR #74 <https://github.com/adamchainz/sql-impressao/pull/74>`__.
+
 * Drop Python 3.10 support.
 
-* Support Python 3.15.
+  `PR #78 <https://github.com/adamchainz/sql-impressao/pull/78>`__.
 
 1.12.0 (2026-05-14)
 -------------------
